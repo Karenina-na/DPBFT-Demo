@@ -8,13 +8,12 @@ import cn.hutool.crypto.asymmetric.RSA;
 import cn.hutool.crypto.digest.DigestUtil;
 import lombok.Data;
 import lombok.ToString;
-import lombok.extern.log4j.Log4j;
-
-import java.util.Arrays;
+import lombok.extern.java.Log;
 
 //  This is the request message
 @ToString
 @Data
+@Log
 public class Request {
     //  Data
     private String data;
