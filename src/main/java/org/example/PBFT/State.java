@@ -10,8 +10,6 @@ enum State {
     PREPARE,
     //  The agent is in the commit state
     COMMIT,
-    //  The agent is in the view change state
-    VIEW_CHANGE,
-    //  The agent is in the new view state
-    NEW_VIEW
+    //  The agent is in the reply state
+    REPLY,
 }
