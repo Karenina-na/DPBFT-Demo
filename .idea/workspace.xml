@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83e00890-56d1-4a51-b535-784f3981a8c6" name="变更" comment="完成PrePrePare信息数据结构编写与测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Msg/PrePare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestPrepare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="83e00890-56d1-4a51-b535-784f3981a8c6" name="变更" comment="完成Prepare数据结构与测试编写">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Msg/ACKType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Msg/Commit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestCommit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestPrePrepare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestPrePrepare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/Msg/TestRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -75,7 +74,54 @@
       <recent name="D:\code\java\DPBFT-Demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestRequest.testSign">
+  <component name="RunManager" selected="JUnit.TestCommit">
+    <configuration name="TestCommit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DPBFT-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestCommit" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCommit.testSign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DPBFT-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestCommit" />
+      <option name="METHOD_NAME" value="testSign" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCommit.testVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DPBFT-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestCommit" />
+      <option name="METHOD_NAME" value="testVerify" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestPrePrepare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DPBFT-Demo" />
       <extension name="coverage">
@@ -87,54 +133,6 @@
       <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
       <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestPrePrepare" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPrePrepare.testSign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DPBFT-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestPrePrepare" />
-      <option name="METHOD_NAME" value="testSign" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPrepare.testSign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DPBFT-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestPrepare" />
-      <option name="METHOD_NAME" value="testSign" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPrepare.testVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DPBFT-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.PBFT.Msg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.PBFT.Msg" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.Msg.TestPrepare" />
-      <option name="METHOD_NAME" value="testVerify" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCommit" />
+        <item itemvalue="JUnit.TestCommit.testVerify" />
+        <item itemvalue="JUnit.TestCommit.testSign" />
         <item itemvalue="JUnit.TestRequest.testSign" />
         <item itemvalue="JUnit.TestPrePrepare" />
-        <item itemvalue="JUnit.TestPrepare.testVerify" />
-        <item itemvalue="JUnit.TestPrepare.testSign" />
-        <item itemvalue="JUnit.TestPrePrepare.testSign" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675407260763</updated>
       <workItem from="1675407261831" duration="5907000" />
-      <workItem from="1675476148500" duration="1507000" />
+      <workItem from="1675476148500" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="完成Request信息格式编写与测试">
       <created>1675412276485</created>
@@ -204,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675477218392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成Prepare数据结构与测试编写">
+      <created>1675477687310</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675477687310</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +220,8 @@
     <MESSAGE value="Add README.md" />
     <MESSAGE value="ADD NOTICE LICENCE" />
     <MESSAGE value="完成PrePrePare信息数据结构编写与测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成PrePrePare信息数据结构编写与测试" />
+    <MESSAGE value="完成Prepare数据结构与测试编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成Prepare数据结构与测试编写" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
