@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83e00890-56d1-4a51-b535-784f3981a8c6" name="变更" comment="Prepare和Commit测试">
+    <list default="true" id="83e00890-56d1-4a51-b535-784f3981a8c6" name="变更" comment="终端操作接口完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PBFT/TestAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/TestAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PBFT/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PBFT/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PBFT/PBFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PBFT/PBFT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +74,21 @@
       <recent name="D:\code\java\DPBFT-Demo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAgent.testPrepareAndCommit">
-    <configuration name="TestAgent.testPrepare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="DPBFT-Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAgent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DPBFT-Demo" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +98,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.PBFT" />
       <option name="MAIN_CLASS_NAME" value="org.example.PBFT.TestAgent" />
-      <option name="METHOD_NAME" value="testPrepare" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,7 +135,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAgent.testSendPrepare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DPBFT-Demo" />
       <extension name="coverage">
         <pattern>
@@ -133,36 +144,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.PBFT" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.TestAgent" />
-      <option name="METHOD_NAME" value="testSendPrepare" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAgent.testSendRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DPBFT-Demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.PBFT.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.PBFT" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.TestAgent" />
-      <option name="METHOD_NAME" value="testSendRequest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PBFT.TestClient" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="JUnit.TestAgent" />
+        <item itemvalue="JUnit.TestClient" />
         <item itemvalue="JUnit.TestAgent.testPrepareAndCommit" />
         <item itemvalue="JUnit.TestAgent.testSendPrePare" />
-        <item itemvalue="JUnit.TestAgent.testPrepare" />
-        <item itemvalue="JUnit.TestAgent.testSendPrepare" />
-        <item itemvalue="JUnit.TestAgent.testSendRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675491102724</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Prepare和Commit测试">
+      <created>1675491770730</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491770730</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +253,8 @@
     <MESSAGE value="重构类继承结构" />
     <MESSAGE value="完成Agent部分单元测试" />
     <MESSAGE value="Prepare和Commit测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepare和Commit测试" />
+    <MESSAGE value="终端操作接口完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="终端操作接口完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

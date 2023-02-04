@@ -59,6 +59,7 @@ public class Agent {
     public boolean sendRequest(Request request) {
         if (request.Verify() && request.verifyHash(getLastHash())) {
             temp.add(request);
+            this.state= State.PRE_PREPARE;
             return true;
         }
         return false;
@@ -75,6 +76,7 @@ public class Agent {
                     agent.PrePrepare(prePrepare);
                 }
             });
+            this.state= State.PREPARE;
             return true;
         }
         return false;
@@ -105,6 +107,7 @@ public class Agent {
                     CommitACK.add(agent.CheckHash(prePrepare));
                 }
             });
+            this.state= State.COMMIT;
 
             if (CommitACK.size() > list.size() / 2) {
                 Commit commit = new Commit(view,sequence,NodeID, ACKType.ACCEPT);
@@ -112,6 +115,7 @@ public class Agent {
                 client.sendACK(commit);
                 blockchain.add(request);
                 temp.clear();
+                this.state= State.INITIAL;
                 return true;
             }
             return false;
@@ -126,5 +130,10 @@ public class Agent {
             return request.Verify() && request.verifyHash(getLastHash());
         }
         return true;
+    }
+
+    //  GetBlockChain
+    public List<Request> getBlockChain() {
+        return blockchain;
     }
 }
