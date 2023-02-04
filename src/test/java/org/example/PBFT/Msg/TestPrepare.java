@@ -3,36 +3,36 @@ package org.example.PBFT.Msg;
 import cn.hutool.crypto.asymmetric.RSA;
 import org.junit.Test;
 
-public class TestPrePrepare {
+public class TestPrepare {
     Integer view = 1;
     Integer sequence = 1;
-    PrePrepare prePrepare;
     RSA rsa = new RSA();
-
+    String NodeId = "1";
+    PrePare prePare;
     private void prepareData(){
         Request request = new Request("test");
         request.Sign(rsa);
         request.SHA256("lastHash");
-        prePrepare = new PrePrepare(view, sequence, request);
+        prePare = new PrePare(NodeId,view, sequence, request);
     }
 
     @Test
     public void testSign() {
         prepareData();
-        prePrepare.Sign(rsa);
-        System.out.println(prePrepare);
+        prePare.Sign(rsa);
+        System.out.println(prePare);
     }
 
     @Test
     public void testVerify() {
         prepareData();
-        prePrepare.Sign(rsa);
-        System.out.println("Verify: " + prePrepare.Verify());
-        assert prePrepare.Verify();
+        prePare.Sign(rsa);
+        System.out.println("Verify: " + prePare.Verify());
+        assert prePare.Verify();
 
         String fakeData = "fake";
-        prePrepare.setRequest(new Request(fakeData));
-        System.out.println("fake data Verify: " + prePrepare.Verify());
-        assert !prePrepare.Verify();
+        prePare.setRequest(new Request(fakeData));
+        System.out.println("fake data Verify: " + prePare.Verify());
+        assert !prePare.Verify();
     }
 }

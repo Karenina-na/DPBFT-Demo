@@ -17,10 +17,12 @@ public class TestRequest {
     public void testVerify() {
         request.Sign(rsa);
         System.out.println("Verify: " + request.Verify());
+        assert request.Verify();
 
         String fakeData = "fake";
         request.setData(fakeData);
         System.out.println("fake data Verify: " + request.Verify());
+        assert !request.Verify();
     }
 
     @Test
