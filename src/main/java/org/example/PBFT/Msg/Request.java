@@ -51,4 +51,11 @@ public class Request {
                 StrUtil.str(this.signature,CharsetUtil.CHARSET_UTF_8) +this.publicKey+
                 lastHash);
     }
+
+    //  verify the hash
+    public boolean verifyHash(String lastHash) {
+        return CompareUtil.compare(this.hash, DigestUtil.sha256Hex(this.data+ this.timestamp+
+                StrUtil.str(this.signature,CharsetUtil.CHARSET_UTF_8) +this.publicKey+
+                lastHash),true)==0;
+    }
 }

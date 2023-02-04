@@ -31,4 +31,13 @@ public class TestRequest {
         request.SHA256("lastHash");
         System.out.println(request);
     }
+
+    @Test
+    public void testVerifyHash() {
+        request.Sign(rsa);
+        request.SHA256("lastHash");
+        String lastHash = "lastHash";
+        System.out.println("VerifyHash: " + request.verifyHash(lastHash));
+        assert request.verifyHash(lastHash);
+    }
 }
