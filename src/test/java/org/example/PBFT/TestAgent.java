@@ -1,7 +1,6 @@
 package org.example.PBFT;
 
 import cn.hutool.crypto.asymmetric.RSA;
-import org.example.PBFT.Msg.Impl.PrePare;
 import org.example.PBFT.Msg.Impl.PrePrepare;
 import org.example.PBFT.Msg.Request;
 import org.junit.Test;
@@ -59,4 +58,22 @@ public class TestAgent {
         System.out.println(agent.PrePrepare(prePare));
     }
 
+    @Test
+    public void testPrepareAndCommit(){
+        List<Agent> list = new LinkedList<>();
+        list.add(this.agent);
+        list.add(new Agent("1"));
+        list.add(new Agent("2"));
+
+        Client c=new Client();
+        c.sendMsg(list,"Hello","0");
+
+        agent.sendPrePrepare(list);
+
+        list.forEach((Agent agent)-> System.out.println("Agent "+agent.getNodeID()+" :"+
+                agent.prepareAndCommit(list,c)));
+
+        System.out.println(list);
+        System.out.println(c.getReply());
+    }
 }

@@ -5,11 +5,9 @@ import cn.hutool.crypto.asymmetric.RSA;
 import lombok.Data;
 import lombok.ToString;
 import lombok.extern.java.Log;
-import org.example.PBFT.Msg.Impl.ACKType;
 import org.example.PBFT.Msg.Impl.Commit;
 import org.example.PBFT.Msg.Request;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -30,13 +28,13 @@ public class Client {
     }
 
     //  Send Message
-    public boolean sendMsg(List<Agent> list, String msg, Integer NodeID) {
+    public boolean sendMsg(List<Agent> list, String msg, String NodeID) {
         //  Create Request
         Request request = new Request(msg);
         request.Sign(rsa);
         //  Find Agent
         for (Agent agent : list) {
-            if (StrUtil.compare(agent.getNodeID(), NodeID.toString(), true) == 0) {
+            if (StrUtil.compare(agent.getNodeID(), NodeID, true) == 0) {
                 String hash = agent.getLastHash();
                 request.SHA256(hash);
                 return agent.sendRequest(request);

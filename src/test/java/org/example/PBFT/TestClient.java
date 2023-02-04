@@ -32,7 +32,7 @@ public class TestClient {
         for (int i = 0; i < number; i++) {
             list.add(new Agent(String.valueOf(i)));
         }
-        System.out.println( client.sendMsg(list,"Hello",1));
+        System.out.println( client.sendMsg(list,"Hello","1"));
         System.out.println(list.get(1).getTemp());
     }
 }
